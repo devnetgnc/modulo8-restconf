@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "d4394bbb-57c1-405e-b5fa-e00547003718",
+		"name": "restconf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getRestconf",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.48/restconf/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"48"
+					],
+					"path": [
+						"restconf",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRestconf-AllInterfaces",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.48/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"48"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRestconf-Interface-g1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.48/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"48"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=GigabitEthernet1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRestconf-Interface-g2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.48/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet2",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"48"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=GigabitEthernet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRestconf-Interface-Loopback1Put",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "C1sco12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "developer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ietf-interfaces:interface\": {\n    \"name\": \"Loopback1\",\n    \"description\": \"My first RESTCONF loopback\",\n    \"type\": \"iana-if-type:softwareLoopback\",\n    \"enabled\": true,\n    \"ietf-ip:ipv4\": {\n        \"address\": [\n                    {\n                    \"ip\": \"10.1.1.1\",\n                    \"netmask\": \"255.255.255.0\"\n                    }\n                    ]\n    },\n        \"ietf-ip:ipv6\": {}\n    }\n    }"
+				},
+				"url": {
+					"raw": "https://10.10.20.48/restconf/data/ietf-interfaces:interfaces/interface=Loopback1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"48"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=Loopback1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
